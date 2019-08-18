@@ -15,7 +15,7 @@ def parse_json(file): #json -> python dict
         text_file = json.loads(text_file)
     except json.JSONDecodeError:
         error = {"error" : {"message" : "Входные файлы некорректны"}}
-        f = open("error123.json", 'w')
+        f = open("error.json", 'w')
         for line in json.dumps(error, indent = 4, ensure_ascii = False):
             f.write(line)
         f.close()
